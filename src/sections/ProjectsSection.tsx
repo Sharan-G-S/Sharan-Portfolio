@@ -4,11 +4,20 @@ import { motion } from 'framer-motion'
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
-      title: "DD Robocon 2024 & 2025 – Team QBotix",
+      title: "DD Robocon 2024 – Team QBotix",
       role: "AI & ROS Technical Member",
       tech: "ROS2, YOLOv8, OpenCV, Jetson Orin Nano",
       description: "Developed autonomous robot navigation using Visual SLAM and path planning. Integrated object detection & color recognition using YOLOv8. Enhanced AI-driven task handling and communication between bots.",
-      achievements: "🥇 AIR 17th in DD Robocon 2024; MathWorks Modeling Competition Participant",
+      achievements: "AIR — 17th",
+      github: "https://github.com/Sharan-G-S",
+      type: "Robotics & AI"
+    },
+    {
+      title: "DD Robocon 2025 – Team QBotix",
+      role: "AI & ROS Technical Member",
+      tech: "ROS2, YOLOv8, OpenCV, Jetson Orin Nano",
+      description: "Continued development on autonomous strategies and multi-agent coordination for competitive robotics challenges. Improved perception pipelines and task orchestration for real-time competition scenarios.",
+      achievements: "Mathworks Modelling Award Final Round Qualifiers",
       github: "https://github.com/Sharan-G-S",
       type: "Robotics & AI"
     },
@@ -106,7 +115,7 @@ const ProjectsSection: React.FC = () => {
       title: "Dynamic Brake Health Monitoring (Research)",
       role: "Research Developer",
       tech: "IoT Sensors, ML, Embedded Systems",
-      description: "Developed and published a sensor-based brake health prediction model. Presented at KCT Project-Based Learning Conference (PBL Program).",
+      description: "Developed a sensor-based brake health prediction model and presented at KCT Project-Based Learning Conference (PBL Program).",
       achievements: "🧠 Published Research Paper",
       github: "https://github.com/Sharan-G-S",
       type: "Research & IoT"

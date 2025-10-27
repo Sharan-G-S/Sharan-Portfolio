@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
     // Trigger rocket animation after initial load
     const timer = setTimeout(() => {
       setShowRocket(true)
-    }, 2000)
+    }, 500)
 
     return () => clearTimeout(timer)
   }, [])
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
     // Show rocket again after delay
     setTimeout(() => {
       setShowRocket(true)
-    }, 10000)
+    }, 6000)
   }
 
   const scrollToSection = (sectionId: string) => {
@@ -44,9 +44,9 @@ const HeroSection: React.FC = () => {
       {/* Hero Content */}
       <div className="hero-content">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h1 className="hero-name">
             Sharan G S
@@ -55,15 +55,15 @@ const HeroSection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         >
           <h2 
             className="hero-title"
-            data-text="AI/ML | Computer Vision | Robotics & Automation (ROS2) | Intelligent Systems | Jetson Platform | Agentic AI"
+            data-text="AI/ML | COMPUTER VISION | ROBOTICS & AUTOMATION (ROS2) | INTELLIGENT SYSTEMS | JETSON PLATFORM | AGENTIC AI | PROFESSIONAL TOPICS"
           >
-            AI/ML | Computer Vision | Robotics & Automation (ROS2) | Intelligent Systems | Jetson Platform | Agentic AI
+            AI/ML | COMPUTER VISION | ROBOTICS & AUTOMATION (ROS2) | INTELLIGENT SYSTEMS | JETSON PLATFORM | AGENTIC AI | PROFESSIONAL TOPICS
           </h2>
         </motion.div>
 
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
           className="hero-roles"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.5 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
           style={{ 
             marginTop: '2rem', 
             color: '#64748b', 
@@ -111,9 +111,9 @@ const HeroSection: React.FC = () => {
             lineHeight: '1.6'
           }}
         >
-          <p>🤖 <strong style={{ color: '#00ff88' }}>AI Lead</strong> – Team QBotix Rover (IRC 2026)</p>
-          <p>🧠 <strong style={{ color: '#00ff88' }}>AI & ROS Technical Member</strong> – Team QBotix (DD Robocon 2024 & 2025)</p>
-          <p>🛰️ <strong style={{ color: '#00ff88' }}>Research & Innovation Lead</strong> – Dept. of AI & DS, KCT</p>
+          <p>🤖 <strong className="role-achievement">AI Lead</strong> – Team QBotix Rover (IRC 2026)</p>
+          <p>🧠 <strong className="role-achievement">AI & ROS Technical Member</strong> – Team QBotix (DD Robocon 2024 & 2025)</p>
+          <p>🛰️ <strong className="role-achievement">Technical Ambassador (2024-25) , Research & Innovation Lead (2025-26) – Dept. of AI & DS, KCT</strong></p>
         </motion.div>
 
         <motion.div

@@ -6,7 +6,7 @@ interface GlobalSparklesProps {
 }
 
 export const GlobalSparkles: React.FC<GlobalSparklesProps> = ({
-  count = 147,
+  count = 191,
   colors = ['#FFD700', '#FFA500', '#FF6B35', '#FF4500', '#DC143C', '#B22222']
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -15,9 +15,12 @@ export const GlobalSparkles: React.FC<GlobalSparklesProps> = ({
     if (!containerRef.current) return
 
     const sparkles: HTMLElement[] = []
+    // Keep full sparkle count on mobile per request, but allow longer durations for smoothness
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
+    const actualCount = count
 
     // Create sparkle elements
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < actualCount; i++) {
       const sparkle = document.createElement('div')
       sparkle.className = 'global-sparkle'
       
@@ -30,9 +33,10 @@ export const GlobalSparkles: React.FC<GlobalSparklesProps> = ({
       sparkle.style.background = color
       sparkle.style.boxShadow = `0 0 10px ${color}, 0 0 20px ${color}, 0 0 30px ${color}`
       
-      // Random animation delay and duration
-      sparkle.style.animationDelay = Math.random() * 3 + 's'
-      sparkle.style.animationDuration = (Math.random() * 2 + 2) + 's'
+  // Random animation delay and duration (longer + smoother on mobile)
+  const baseDur = isMobile ? 6 : 3
+  sparkle.style.animationDelay = Math.random() * (isMobile ? 4 : 3) + 's'
+  sparkle.style.animationDuration = (Math.random() * (isMobile ? 6 : 2) + baseDur) + 's'
       
       containerRef.current.appendChild(sparkle)
       sparkles.push(sparkle)

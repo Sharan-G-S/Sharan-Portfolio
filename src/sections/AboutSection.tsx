@@ -5,7 +5,8 @@ const AboutSection: React.FC = () => {
   const achievements = [
     "🥇 AIR 17th – DD Robocon 2024",
     "🤖 AI Lead – Team QBotix Rover (IRC 2026)",
-    "🧠 Research & Innovation Lead – Dept. of AI & DS, KCT",
+    "🛰️ Technical Ambassador (2024-25) , Research & Innovation Lead (2025-26) – Dept. of AI & DS, KCT",
+    "🏁 DD Robocon 2025 – Strong Contenders; Qualified Finals for MathWorks Modelling Award",
     "📰 Published Research – Dynamic Brake Health Monitoring",
     "🎯 Top 100 Innovators – PBL Program",
     "🎮 Event Coordinator – Sherlock in Silicon Valley (Yugam 2025)"

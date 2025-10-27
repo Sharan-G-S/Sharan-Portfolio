@@ -85,15 +85,9 @@ const Navigation: React.FC = () => {
         <motion.button
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{
-            display: 'none',
-            background: 'none',
-            border: 'none',
-            color: '#00ffff',
-            fontSize: '1.5rem',
-            cursor: 'pointer'
-          }}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           whileTap={{ scale: 0.95 }}
+          style={{ background: 'none', border: 'none' }}
         >
           {isMobileMenuOpen ? '✕' : '☰'}
         </motion.button>
