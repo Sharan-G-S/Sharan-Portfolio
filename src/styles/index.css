@@ -414,11 +414,8 @@ html {
   top: 2px;
   left: 2px;
   z-index: -1;
-  background: linear-gradient(135deg, #b8860b 0%, #cd853f 50%, #daa520 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: none;
+  /* Remove gradient shadow so title appears in a single color across devices */
+  display: none;
 }
 
 .hero-subtitle {
